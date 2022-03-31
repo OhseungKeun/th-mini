@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Search parkinglot</title>
+</head>
+<body>
+    <!-- 주차장 -->
+<h1> 강남구 주차장 </h1>
+-----------------------------------------------------------<br>
+<h2> 전체 주차장 <h2>
+<form method='post' action='api/users/find' name='userForm' target="targetURL">
+전체 주차장 보기 <input type="button" value="강남구 주차장 보기"
+ onclick="document.targetURL.location.href='/park/list'">
+ <p>
+-----------------------------------------------------------<br>
+<h2> 주차장 입력 </h2>
+<p>
+  동을 입력하세요 <input type="text" size='10' name='dong'>
+  <input type='button' value="Search"
+  onclick='document.targetURL.location.href="/park/find?dong="+document.userForm.dong.value'>
+  <p>
+-----------------------------------------------------------<br>
+<h4> 주차장 생성 </h4>
+<input type='button' value='go to insert' size='10' onclick = "location.href='insert.html'">
+<p>
+-----------------------------------------------------------<br>
+<h4> 주차장 삭제 </h4>
+<input type='button' value='go to delete' size='10' onclick='location.href="delete.html"'>
+<p>
+-----------------------------------------------------------<br>
+<h4> 주차장 수정 </h4>
+<input type='button' value='go to update' size='10' onclick='location.href="update.html"'>
+<p>
+-----------------------------------------------------------<br>
+<h4> 지도 보러 가기 </h4>
+<input type='button' value="지도" size="10" onclick="location.href='map.html'">
+<p>
+-----------------------------------------------------------<br>
+<iframe name=targetURL class="iframe-preview center" width="50%" height="500"
+style="border:none;">
+</iframe>
+
+
+</script>
+</body>
+</html>
